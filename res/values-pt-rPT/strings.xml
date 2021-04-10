@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"Amplificador FX"</string>
     <string name="user" msgid="3949460956502898057">"Utilizador"</string>
     <string name="picker_title" msgid="8464126693702817261">"Painel de efeitos musicais"</string>
+    <string name="rock">"Rock"</string>
+    <string name="pop">"Pop"</string>
+    <string name="normal">Normal</string>
+    <string name="jazz">"Jazz"</string>
+    <string name="hippop">"Hip Hop"</string>
+    <string name="heavymetal">"Metal Pesado"</string>
+    <string name="headset">"Auscultador"</string>
+    <string name="folk">"Gente"</string>
+    <string name="flat">"Plano"</string>
+    <string name="dance">"Dança"</string>
+    <string name="classical">"Classical"</string>
 </resources>

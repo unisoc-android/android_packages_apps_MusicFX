@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX booster"</string>
     <string name="user" msgid="3949460956502898057">"User"</string>
     <string name="picker_title" msgid="8464126693702817261">"Control panel ng mga effect sa musika"</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+    <string name="normal">Normal</string>
+    <string name="jazz">Diyas</string>
+    <string name="hippop">Hip Hop</string>
+    <string name="heavymetal">Malakas na Metal</string>
+    <string name="headset">Headset</string>
+    <string name="folk">Pambayan</string>
+    <string name="flat">Lapad</string>
+    <string name="dance">Sayaw</string>
+    <string name="classical">Klasiko</string>
 </resources>

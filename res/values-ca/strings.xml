@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX booster"</string>
     <string name="user" msgid="3949460956502898057">"Usuari"</string>
     <string name="picker_title" msgid="8464126693702817261">"Tauler de control dels efectes musicals"</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+    <string name="normal">"Normal"</string>
+    <string name="jazz">Jazz</string>
+    <string name="hippop">Hip hop</string>
+    <string name="heavymetal">Heavy metal</string>
+    <string name="headset">Auricular</string>
+    <string name="folk">Folk</string>
+    <string name="flat">Bemoll</string>
+    <string name="dance">Discoteca</string>
+    <string name="classical">Clàssica</string>
 </resources>

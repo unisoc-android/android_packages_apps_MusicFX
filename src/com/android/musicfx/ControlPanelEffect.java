@@ -113,7 +113,9 @@ public class ControlPanelEffect {
     private final static boolean VIRTUALIZER_ENABLED_DEFAULT = true;
     private final static int VIRTUALIZER_STRENGTH_DEFAULT = 0;
     private final static boolean BASS_BOOST_ENABLED_DEFAULT = true;
-    private final static int BASS_BOOST_STRENGTH_DEFAULT = 667;
+    /* bug 1188077/1146010 set the default bass boost to 0 to prevent louder volume after turning on the equalizer @{ */
+    private final static int BASS_BOOST_STRENGTH_DEFAULT = 0;
+    /* @} */
     private final static boolean PRESET_REVERB_ENABLED_DEFAULT = false;
     private final static int PRESET_REVERB_CURRENT_PRESET_DEFAULT = 0; // None
 
@@ -122,6 +124,7 @@ public class ControlPanelEffect {
     private final static String EQUALIZER_PRESET_NAME_DEFAULT = "Preset";
     private final static short EQUALIZER_NUMBER_BANDS_DEFAULT = 5;
     private final static short EQUALIZER_NUMBER_PRESETS_DEFAULT = 0;
+    private final static short EQUALIZER_PRESET_FLAT = 3;
     private final static short[] EQUALIZER_BAND_LEVEL_RANGE_DEFAULT = { -1500, 1500 };
     private final static int[] EQUALIZER_CENTER_FREQ_DEFAULT = { 60000, 230000, 910000, 3600000,
             14000000 };
@@ -144,6 +147,10 @@ public class ControlPanelEffect {
      * overloading.
      */
     private final static int DUMMY_ARGUMENT = -1;
+
+    /* bug1169181: open eq ,don't Override User EQ Param @{ */
+    private static boolean mIsUserEQParamUpdate = true;
+    /* @} */
 
     /**
      * Inits effects preferences for the given context and package name in the control panel. If
@@ -172,6 +179,15 @@ public class ControlPanelEffect {
             // Virtualizer
             final boolean isVIEnabled = prefs.getBoolean(Key.virt_enabled.toString(),
                     VIRTUALIZER_ENABLED_DEFAULT);
+            /* Bug 1177528  Equalizer shows abnormal info after MusicFX is cleared @{ */
+            try {
+                Virtualizer virt = new Virtualizer(0, audioSession);
+                virt.release();
+            } catch (final RuntimeException e) {
+                //FIX ME
+                Log.e(TAG, "resource leak protect: new a AudioEffect to release the previous one." + e);
+            }
+            /* @} */
             final Virtualizer virt = new Virtualizer(0, audioSession);
             final int vIStrength = prefs.getInt(Key.virt_strength.toString(),
                     virt.getRoundedStrength());
@@ -276,8 +292,8 @@ public class ControlPanelEffect {
                 final short[] eQPresetUserBandLevelDefault = Arrays.copyOf(
                         EQUALIZER_PRESET_USER_BAND_LEVEL_DEFAULT, mEQNumBands);
                 // If no preset prefs set use CI EXTREME (= numPresets)
-                final short eQPreset = (short) prefs.getInt(Key.eq_current_preset.toString(),
-                        mEQNumPresets);
+                /*Bug 1104472:Preset EQ is displayed as "FX booster",but it's band level is actually "flat"*/
+                final short eQPreset = (short) prefs.getInt(Key.eq_current_preset.toString(), EQUALIZER_PRESET_FLAT);
                 editor.putInt(Key.eq_current_preset.toString(), eQPreset);
                 final short[] bandLevel = new short[mEQNumBands];
                 for (short band = 0; band < mEQNumBands; band++) {
@@ -395,6 +411,9 @@ public class ControlPanelEffect {
                             final int len = bandLevels.length;
                             for (short band = 0; band < len; band++) {
                                 final int level = bandLevels[band];
+                                /* bug1169181: open eq ,don't Override User EQ Param @{ */
+                                mIsUserEQParamUpdate = false;
+                                /* @} */
                                 setParameterInt(context, packageName,
                                         audioSession, Key.eq_band_level, level, band);
                             }
@@ -597,7 +616,13 @@ public class ControlPanelEffect {
                         equalizerEffect.setBandLevel(band, (short) value);
                         value = equalizerEffect.getBandLevel(band);
                         // save band level in User preset
-                        editor.putInt(Key.eq_preset_user_band_level.toString() + band, value);
+                        /* bug1169181: open eq ,don't Override User EQ Param @{ */
+                        if (mIsUserEQParamUpdate) {
+                            Log.d(TAG, "Override User EQ Param");
+                            editor.putInt(Key.eq_preset_user_band_level.toString() + band, value);
+                        }
+                        mIsUserEQParamUpdate = true;
+                        /* @} */
                     }
                     break;
                 }

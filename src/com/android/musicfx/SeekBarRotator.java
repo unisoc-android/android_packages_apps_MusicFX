@@ -70,6 +70,8 @@ public class SeekBarRotator extends ViewGroup {
 
         if (child.getVisibility() != GONE) {
             // rotate the child 90 degrees counterclockwise around its upper-left
+            // Unisoc Bug 1141316: set child view direction as LTR , still rotate from LTR direction in Right to Left languages.
+            child.setLayoutDirection(View.LAYOUT_DIRECTION_LTR);
             child.setPivotX(0);
             child.setPivotY(0);
             child.setRotation(-90);

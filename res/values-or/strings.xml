@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="no_effects">"ଇଫେକ୍ଟଗୁଡ଼ିକ ଉପଲବ୍ଧ ନୁହେଁ ।"</string>
+    <string name="eq_dialog_title">"ଇକ୍ୱାଲାଇଜର୍"</string>
+    <string name="headset_plug">"ଏହି ଇଫେକ୍ଟଗୁଡ଼ିକ ପାଇଁ ହେଡଫୋନ୍ ଗୁଡ଼ିକ ପ୍ଲଗ୍ ଇନ୍ କରନ୍ତୁ ।"</string>
+    <string name="bass_boost_strength">"ବାସ୍ ବୁଷ୍ଟ"</string>
+    <string name="virtualizer_strength">"ସରାଉଣ୍ଡ ସାଉଣ୍ଡ"</string>
+    <string name="setup">"ସେଟଅପ୍"</string>
+    <string name="ci_extreme">"FX ବୁଷ୍ଟର"</string>
+    <string name="user">"ବ୍ୟବହାରକାରୀ"</string>
+    <string name="picker_title">"ମ୍ୟୁଜିକ୍ ଇଫେକ୍ଟ କଣ୍ଟ୍ରୋଲ୍ ପ୍ୟାନେଲ୍"</string>
+    <string name="headset">"ହେଡସେଟ୍"</string>
+    <string name="pop">"ପପ୍"</string>
+    <string name="normal">"ସ୍ୱାଭାବିକ"</string>
+    <string name="classical">"ଶାସ୍ତ୍ରୀୟ"</string>
+    <string name="dance">"ନୃତ୍ୟ"</string>
+    <string name="flat">"ଫ୍ଲାଟ୍"</string>
+    <string name="folk">"ଲୋକନୃତ୍ୟ"</string>
+    <string name="heavymetal">"ଓଜନିଆ ଧାତୁ"</string>
+    <string name="hippop">"ହିପ୍ ହପ୍"</string>
+    <string name="jazz">"ଜାଜ୍"</string>
+    <string name="rock">"ରକ୍"</string>
+</resources>

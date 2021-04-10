@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX Booster"</string>
     <string name="user" msgid="3949460956502898057">"المستخدم"</string>
     <string name="picker_title" msgid="8464126693702817261">"لوحة تحكم التأثيرات الموسيقية"</string>
+    <string name="rock">روك</string>
+    <string name="pop">موسيقى البوب</string>
+    <string name="normal">عادي</string>
+    <string name="jazz">موسقى الجاز</string>
+    <string name="hippop">الهيب هوب</string>
+    <string name="heavymetal">معدن ثقيل</string>
+    <string name="headset">سماعة</string>
+    <string name="folk">شعبي</string>
+    <string name="flat">مسطح</string>
+    <string name="dance">الرقص</string>
+    <string name="classical">كلاسيكي</string>
 </resources>

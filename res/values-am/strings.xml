@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"የኢፌክት መጨመሪያ"</string>
     <string name="user" msgid="3949460956502898057">"ተጠቃሚ"</string>
     <string name="picker_title" msgid="8464126693702817261">"የሙዚቃ ተፅዕኖ መቆጣጠሪያ ፓናል"</string>
+    <string name="rock">ሮክ</string>
+    <string name="pop">ብቅ</string>
+    <string name="normal">ኖርማል </string>
+    <string name="jazz">ጃዝ</string>
+    <string name="hippop">ሂፕ ሆፕ</string>
+    <string name="heavymetal">ከባድ ብረት</string>
+    <string name="headset">የጆሮ ማዳመጫ</string>
+    <string name="folk">ወግ</string>
+    <string name="flat">ጠፍጣፋ</string>
+    <string name="dance">ዳንስ</string>
+    <string name="classical">ለስላሳ ሙዚቃ</string>
 </resources>

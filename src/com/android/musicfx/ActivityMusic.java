@@ -287,6 +287,29 @@ public class ActivityMusic extends Activity implements OnSeekBarChangeListener {
         for (short i = 0; i < numPresets; i++) {
             mEQPresetNames[i] = ControlPanelEffect.getParameterString(mContext,
                     mCallingPackageName, mAudioSession, ControlPanelEffect.Key.eq_preset_name, i);
+            /* Bug895648 add some translation @{ */
+            if ("Pop".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.pop);
+            } else if ("Normal".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.normal);
+            } else if ("Classical".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.classical);
+            } else if ("Dance".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.dance);
+            } else if ("Flat".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.flat);
+            } else if ("Folk".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.folk);
+            } else if ("Heavy Metal".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.heavymetal);
+            } else if ("Hip Hop".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.hippop);
+            } else if ("Jazz".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.jazz);
+            } else if ("Rock".equals(mEQPresetNames[i])) {
+                mEQPresetNames[i] = getString(R.string.rock);
+            }
+            /* Bug895648 @} */
         }
         mEQPresetNames[numPresets] = getString(R.string.ci_extreme);
         mEQPresetNames[numPresets + 1] = getString(R.string.user);
@@ -458,7 +481,7 @@ public class ActivityMusic extends Activity implements OnSeekBarChangeListener {
             ab.setCustomView(mToggleSwitch, new ActionBar.LayoutParams(
                     ActionBar.LayoutParams.WRAP_CONTENT,
                     ActionBar.LayoutParams.WRAP_CONTENT,
-                    Gravity.CENTER_VERTICAL | Gravity.RIGHT));
+                    Gravity.CENTER_VERTICAL | Gravity.END));
             ab.setDisplayOptions(ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_CUSTOM);
 
         } else {
@@ -626,6 +649,7 @@ public class ActivityMusic extends Activity implements OnSeekBarChangeListener {
      */
     private void updateUIHeadset() {
         if (mToggleSwitch.isChecked()) {
+            findViewById(R.id.headSetTitle).setEnabled(mIsHeadsetOn);
             ((TextView) findViewById(R.id.vIStrengthText)).setEnabled(
                     mIsHeadsetOn || !mVirtualizerIsHeadphoneOnly);
             ((SeekBar) findViewById(R.id.vIStrengthSeekBar)).setEnabled(
@@ -663,8 +687,9 @@ public class ActivityMusic extends Activity implements OnSeekBarChangeListener {
                 centerFreqHz = centerFreqHz / 1000;
                 unitPrefix = "k";
             }
+            //Bug 1169609-The unit of the equalizer sample rate is lost when the system font is set to the largest
             ((TextView) eqcontainer.findViewById(EQViewElementIds[band][0])).setText(
-                    format("%.0f ", centerFreqHz) + unitPrefix + "Hz");
+                    format("%.0f ", centerFreqHz) + unitPrefix);
             mEqualizerSeekBar[band] = (SeekBar) eqcontainer
                     .findViewById(EQViewElementIds[band][1]);
             eqcontainer.findViewById(EQViewElementIds[band][0])

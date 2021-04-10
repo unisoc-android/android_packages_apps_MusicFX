@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"تقویت‌کننده FX"</string>
     <string name="user" msgid="3949460956502898057">"کاربر"</string>
     <string name="picker_title" msgid="8464126693702817261">"مرکز کنترل جلوه‌های موسیقی"</string>
+    <string name="rock">راک</string>
+    <string name="pop">پاپ</string>
+    <string name="normal">"معمولی"</string>
+    <string name="jazz">جاز</string>
+    <string name="hippop">هیپ هاپ</string>
+    <string name="heavymetal">هوی متال</string>
+    <string name="headset">هدست</string>
+    <string name="folk">فالک</string>
+    <string name="flat">یکنواخت</string>
+    <string name="dance">رقص</string>
+    <string name="classical">کلاسیک</string>
 </resources>

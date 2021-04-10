@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX Booster"</string>
     <string name="user" msgid="3949460956502898057">"ผู้ใช้"</string>
     <string name="picker_title" msgid="8464126693702817261">"แผงควบคุมเอฟเฟ็กต์เพลง"</string>
+    <string name="rock">"ร็อค"</string>
+    <string name="pop">"ป๊อป"</string>
+    <string name="normal">"ปกติ"</string>
+    <string name="jazz">"แจ๊ส"</string>
+    <string name="hippop">"ฮิปฮอป"</string>
+    <string name="heavymetal">"เฮฟวีเมทัล"</string>
+    <string name="headset">"ชุดหูฟัง"</string>
+    <string name="folk">"โฟล์ก"</string>
+    <string name="flat">"แฟลต"</string>
+    <string name="dance">"แดนซ์"</string>
+    <string name="classical">"คลาสสิก"</string>
 </resources>

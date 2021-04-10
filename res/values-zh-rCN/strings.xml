@@ -26,4 +26,20 @@
     <string name="ci_extreme" msgid="1736938429763948084">"音效增强器"</string>
     <string name="user" msgid="3949460956502898057">"用户"</string>
     <string name="picker_title" msgid="8464126693702817261">"音乐效果控制面板"</string>
+
+    <string name="headset">"耳机"</string>
+
+    <!-- Bug 1107051 add some translation @{ -->
+    <string name="normal">"正常"</string>
+    <string name="pop">"流行"</string>
+    <string name="classical">"经典"</string>
+    <string name="dance">"舞曲"</string>
+    <string name="flat">"平调"</string>
+    <string name="folk">"民谣"</string>
+    <string name="heavymetal">"重金属"</string>
+    <string name="hippop">"嘻哈"</string>
+    <string name="jazz">"爵士"</string>
+    <string name="rock">"摇滚"</string>
+    <!-- Bug 1107051 @} -->
+
 </resources>

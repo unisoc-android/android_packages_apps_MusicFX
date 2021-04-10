@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX booster"</string>
     <string name="user" msgid="3949460956502898057">"Користувач"</string>
     <string name="picker_title" msgid="8464126693702817261">"Панель керув. музичн. ефектами"</string>
+    <string name="rock">"рок"</string>
+    <string name="pop">"поп"</string>
+    <string name="normal">"нормальний"</string>
+    <string name="jazz">"Джаз"</string>
+    <string name="hippop">"хіп-хоп"</string>
+    <string name="heavymetal">"хеві-метал"</string>
+    <string name="headset">"Гарнітура"</string>
+    <string name="folk">"народний"</string>
+    <string name="flat">"плоский"</string>
+    <string name="dance">"танцювати"</string>
+    <string name="classical">"класичний"</string>
 </resources>

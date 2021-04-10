@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"Усилитель FX"</string>
     <string name="user" msgid="3949460956502898057">"Своя настройка"</string>
     <string name="picker_title" msgid="8464126693702817261">"Управление звуковыми эффектами"</string>
+    <string name="rock">Рок</string>
+    <string name="pop">Поп</string>
+    <string name="normal">Нормальный</string>
+    <string name="jazz">Джаз</string>
+    <string name="hippop">Хип-хоп</string>
+    <string name="heavymetal">Тяжелый металл</string>
+    <string name="headset">Наушники</string>
+    <string name="folk">Фольк</string>
+    <string name="flat">Умеренный</string>
+    <string name="dance">Танцы</string>
+    <string name="classical">Классика</string>
 </resources>

@@ -17,6 +17,7 @@
 package com.android.musicfx;
 
 import android.app.Activity;
+import android.app.ActivityManager;
 import android.app.IntentService;
 import android.content.BroadcastReceiver;
 import android.content.ComponentName;
@@ -82,7 +83,14 @@ public class Compatibility {
                 Intent updateIntent = new Intent(this, Service.class);
                 updateIntent.putExtra("defPackage", defPackage);
                 updateIntent.putExtra("defName", defName);
-                startService(updateIntent);
+
+                //Bug 1240568 JavaCrash:java.lang.IllegalStateException
+                try {
+                    startService(updateIntent);
+                } catch (IllegalStateException e) {
+                    if (!ActivityManager.isUserAMonkey()) throw e;
+                    Log.e(TAG, "Exception caught in monkey", e);
+                }
             } else {
                 i.setComponent(new ComponentName(defPackage, defName));
             }

@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX बूस्‍टर"</string>
     <string name="user" msgid="3949460956502898057">"उपयोगकर्ता"</string>
     <string name="picker_title" msgid="8464126693702817261">"संगीत प्रभाव कंट्रोल फलक"</string>
+    <string name="rock">रॉक</string>
+    <string name="pop">पॉप </string>
+    <string name="normal">"सामान्य"</string>
+    <string name="jazz">जैज़ </string>
+    <string name="hippop">हिप हॉप </string>
+    <string name="heavymetal">भारी धातु </string>
+    <string name="headset">हेडसेट </string>
+    <string name="folk">लोग </string>
+    <string name="flat">सपाट </string>
+    <string name="dance">नृत्य </string>
+    <string name="classical">क्लासिकल </string>
 </resources>

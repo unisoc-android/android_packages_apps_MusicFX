@@ -29,7 +29,8 @@
         android:icon="@drawable/icon"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.NoTitleBar"
-        android:allowBackup="false">
+        android:allowBackup="false"
+        android:supportsRtl="true">
         <activity
             android:name=".ActivityMusic"
             android:theme="@android:style/Theme.Material.Light"
@@ -80,7 +81,8 @@
         </receiver>
         <service android:name="Compatibility$Service" android:exported="false" />
         <activity
-            android:name="Compatibility$Redirector">
+            android:name="Compatibility$Redirector"
+            android:theme="@style/android:Theme.Translucent.NoTitleBar">
             <intent-filter
                 android:priority="2147483647">
                 <action android:name="android.media.action.DISPLAY_AUDIO_EFFECT_CONTROL_PANEL" />

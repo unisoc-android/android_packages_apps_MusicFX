@@ -26,4 +26,15 @@
     <string name="ci_extreme" msgid="1736938429763948084">"FX booster"</string>
     <string name="user" msgid="3949460956502898057">"Käyttäjä"</string>
     <string name="picker_title" msgid="8464126693702817261">"Musiikkitehost. hallintapaneeli"</string>
+    <string name="rock">Rock</string>
+    <string name="pop">Pop</string>
+    <string name="normal">"Normaali"</string>
+    <string name="jazz">Jazz</string>
+    <string name="hippop">Hip Hop</string>
+    <string name="heavymetal">Raskasmetalli</string>
+    <string name="headset">Kuuloke</string>
+    <string name="folk">Kansa</string>
+    <string name="flat">Huoneisto</string>
+    <string name="dance">Tanssi</string>
+    <string name="classical">Klassinen</string>
 </resources>
